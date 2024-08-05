@@ -1,0 +1,166 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  font-family: "IM Fell Great Primer SC", serif;
+ 
+}
+.subWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.box {
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 320px;
+  max-width: 320px;
+  min-height: 300px;
+  max-height: 300px;
+  margin: 10px;
+  padding: 10px;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.box-top {
+  background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.box-top-first {
+  display: flex;
+  justify-content: space-between;
+  align-items: first baseline;
+}
+.box-top-first p {
+  border: 2px solid;
+  padding: 5px;
+  border-radius: 5px;
+  color: #556b2f;
+  background-color: #e0c097;
+  animation-name: ani1;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1000;
+  animation-direction: alternate;
+  animation-fill-mode: backwards;
+}
+
+.box-top-first div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.box-top-first div button {
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  &:hover {
+    cursor: pointer;
+    background-color: orange;
+    color: #fff;
+    border-radius: 20%;
+  }
+}
+.box-top-last {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4rem;
+ 
+}
+
+.box-top-last p {
+  text-align: left;
+  min-width: 150px;
+  text-transform: capitalize;
+  color: white;
+}
+.box-top-last button {
+  width: 50px;
+  height: 30px;
+  padding: 5px;
+  background-color: #d69316;
+  border: none;
+  color: white;
+  border-radius: 40%;
+  margin-left: 15rem;
+  margin-bottom: 10px;
+
+  transition: all 0.5s;
+  &:hover {
+    cursor: pointer;
+    transform: scale(0.8);
+    background-color: white;
+    color: black;
+    border: 2px solid #d69316;
+    border-radius: 20%;
+  }
+}
+
+.box-bottom {
+  color: #094c72;
+}
+span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  animation-name: ani2;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1000;
+  animation-direction: alternate;
+  animation-fill-mode:both;
+}
+.line-through {
+  text-decoration: line-through;
+}
+
+@keyframes ani1 {
+  from {
+    transform: translate(-5px);
+    background-color: maroon;
+    color: white;
+  }
+  to {
+    transform: translate(25px);
+  }
+}
+@keyframes ani2 {
+  0% {
+    transform: translate(0);
+    color: #ff00ff;
+  }
+
+  25% {
+    transform: translate(0);
+    color: #ffc0cb;
+  }
+
+  50% {
+    transform: translate(0);
+    color: #800080;
+  }
+
+  100% {
+    transform: translate(0);
+    color:#dc143c;
+  }
+}
